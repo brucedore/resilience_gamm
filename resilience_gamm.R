@@ -5,9 +5,9 @@
 require(mgcv)
 
 #import data
-div<-read_csv("~/div.csv")
-wid<-read_csv("~/wid.csv")
-empred<-read_csv("~/empred.csv")
+div<-read.csv("~/div.csv")
+wid<-read.csv("~/wid.csv")
+empred<-read.csv("~/empred.csv")
 
 #fixed effect of time, no varying parameters
 div_fe_bam <- bam(wbeing_div ~ s(year_div, k = 48), data=div)
